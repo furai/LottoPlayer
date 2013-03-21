@@ -14,8 +14,10 @@ namespace Lotto
     {
         // define a DELEGAT so it can sende Lotto numbers to subscribes
 		public delegate void LottoPlayerHandler(int[] num);
-        // Create an EVENT or a delegate instance
+		public delegate void LottoPlayerHandler2();       
+		// Create an EVENT or a delegate instance
 		public event LottoPlayerHandler newLottoNumberEvent;
+		public event LottoPlayerHandler2 newLottoNumberEvent2;
 
         static void Main(string[] args)
         {
@@ -40,9 +42,10 @@ namespace Lotto
                 for (int i = 0; i <7; i++) num[i] = n.Next(1,36);
                 // To increase the probability so only one of numbers will change
                 Thread.Sleep(1000);
-				Console.WriteLine(num[0] + " " + num[1] + " " + num[2] + " " + num[3] + " " + num[4] + " " + num[5] + "\n");
+				Console.WriteLine("\nWinning numbers are: " + num[0] + " " + num[1] + " " + num[2] + " " + num[3] + " " + num[4] + " " + num[5]);
                 // FIRE the event
 				newLottoNumberEvent(num);
+				newLottoNumberEvent2();
             }
         }
     }
