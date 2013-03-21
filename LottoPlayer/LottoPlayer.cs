@@ -11,11 +11,14 @@ namespace Lotto
     class LottoPlayer
     {
         DanskeSpil ds;
-        public LottoPlayer(DanskeSpil ds)
+		private string name = null;
+        public LottoPlayer(string name, DanskeSpil ds)
         {
+			this.name = name;
             this.ds = ds;
-            // Subscribe the Lotto drawing by DanskeSpil 
-        }
+            // Subscribe the Lotto drawing by DanskeSpil
+			ds.newLottoNumberEvent += new DanskeSpil.LottoPlayerHandler(CheckMyNum);
+		}
           
         private int[] myNum = { 1, 3, 5, 7, 9, 11, 13 };
 
@@ -65,8 +68,10 @@ namespace Lotto
             {
                 if (n[i] != myNum[i]) luck = false;
             }
-            if (luck == true)
-                Console.WriteLine("Now I am Millionaire");
+			if (luck == true)
+				Console.WriteLine(name + ", now you are Millionaire.");
+			else
+				Console.WriteLine(name + ", it is a bad day, try again.");
         }
     }
 
