@@ -1,0 +1,6 @@
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\bin\Debug\LottoPlayer.exe.config
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\bin\Debug\LottoPlayer.exe
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\bin\Debug\LottoPlayer.pdb
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\obj\Debug\LottoPlayer.csprojResolveAssemblyReference.cache
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\obj\Debug\LottoPlayer.exe
+D:\Programmes\VS_Files\Projects\LottoPlayer\LottoPlayer\obj\Debug\LottoPlayer.pdb
